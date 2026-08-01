@@ -101,7 +101,7 @@
           .popular-services-box.card
             .popular-top
               - if service.logo.attached?
-                = image_tag service.logo.variant(resize: "100x80")
+                = image_tag service.logo.variant(resize_to_limit: [100, 80])
               - else
                 = image_tag "eosc-img.png", alt: "Service name"
               .badge.access-information.fa-pull-right.badge-right{ class: "style_#{order_type(service)}" }
